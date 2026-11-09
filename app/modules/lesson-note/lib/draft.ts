@@ -11,7 +11,10 @@ export type NoteDraft = {
   canSave: boolean;
 };
 
-export function describe(draft: string, savedBody: string | null): NoteDraft {
+export function describeDraft(
+  draft: string,
+  savedBody: string | null
+): NoteDraft {
   const length = draft.trim().length;
   const tooLong = length > MAX_NOTE_LENGTH;
   // The server trims before it stores, so the saved body needs no trim.

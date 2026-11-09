@@ -1,4 +1,4 @@
-import { describe, type NoteDraft } from "./lib/draft";
+import { describeDraft, type NoteDraft } from "./lib/draft";
 
 export type { NoteDraft, NoteDraftStatus } from "./lib/draft";
 
@@ -10,5 +10,5 @@ export function describeNoteDraft(
   draft: string,
   savedBody: string | null
 ): NoteDraft {
-  return describe(draft, savedBody);
+  return describeDraft(draft, savedBody);
 }
