@@ -129,7 +129,6 @@
         "app/modules/instructor-analytics/lib/instructor-analytics.ts",
         "app/modules/instructor-analytics/tests/instructor-analytics.test.ts",
         "app/routes/admin.categories.tsx",
-        "app/routes/courses.$slug.lessons.$lessonId.tsx",
         "app/routes/courses.$slug.purchase.tsx",
         "app/routes/courses.$slug.tsx",
         "app/routes/courses.tsx",
@@ -147,6 +146,14 @@
     },
     {
       "files": [
+        "app/components/lesson/curriculum-sidebar.tsx",
+        "app/components/lesson/full-lesson.tsx",
+        "app/components/lesson/locked-lesson.tsx",
+        "app/components/lesson/quiz-section.tsx",
+        "app/modules/lesson-viewer/lib/course.server.ts",
+        "app/modules/lesson-viewer/lib/page.server.ts",
+        "app/modules/lesson-viewer/lib/quiz.server.ts",
+        "app/modules/lesson-viewer/lib/thread.server.ts",
         "app/components/comment-thread.tsx",
         "app/components/dev-ui.tsx",
         "app/components/monaco-markdown-editor.tsx",
@@ -202,6 +209,8 @@
     },
     {
       "files": [
+        "app/modules/lesson-viewer/lib/progress.server.ts",
+        "app/modules/lesson-viewer/lib/quiz.server.ts",
         "app/lib/bookmarks.server.ts",
         "app/lib/comments.server.ts",
         "app/lib/enrollments.server.ts",
@@ -233,6 +242,7 @@
     },
     {
       "files": [
+        "app/modules/lesson-viewer/lib/page.server.ts",
         "app/routes/courses.$slug.lessons.$lessonId.tsx",
         "request-logger/render.ts"
       ],
