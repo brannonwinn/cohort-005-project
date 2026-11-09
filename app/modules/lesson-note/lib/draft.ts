@@ -1,6 +1,7 @@
 import { MAX_NOTE_LENGTH } from "~/lib/notes";
 
-export type NoteDraftStatus = "unsaved" | "saved" | "blank";
+/** `cleared`: a saved Note emptied in the box, which the server will not store. */
+export type NoteDraftStatus = "unsaved" | "saved" | "blank" | "cleared";
 
 export type NoteDraft = {
   /** Characters that will be saved: the server trims before it stores. */
@@ -22,6 +23,7 @@ export function describeDraft(
 
   let status: NoteDraftStatus = "unsaved";
   if (unchanged) status = savedBody === null ? "blank" : "saved";
+  else if (length === 0) status = "cleared";
 
   return {
     length,

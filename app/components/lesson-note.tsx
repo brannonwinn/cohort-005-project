@@ -63,6 +63,13 @@ function NoteStatus({
   status: NoteDraftStatus;
   updatedAt: string | null;
 }) {
+  if (status === "cleared") {
+    return (
+      <span className="text-xs text-muted-foreground">
+        A note can&apos;t be empty
+      </span>
+    );
+  }
   if (status === "unsaved") {
     return (
       <span className="text-xs text-muted-foreground">Unsaved changes</span>

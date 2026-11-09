@@ -44,9 +44,9 @@ describe("describeNoteDraft", () => {
     expect(draft.canSave).toBe(true);
   });
 
-  it("is unsaved, but cannot save, when a saved note is cleared", () => {
-    const draft = describeNoteDraft("", "Same text");
-    expect(draft.status).toBe("unsaved");
+  it("is cleared, and cannot save, when a saved note is emptied", () => {
+    const draft = describeNoteDraft(" ", "Same text");
+    expect(draft.status).toBe("cleared");
     expect(draft.canSave).toBe(false);
   });
 
