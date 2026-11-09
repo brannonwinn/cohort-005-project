@@ -13,7 +13,7 @@ export function getQuizByLessonId(db: Db, lessonId: number) {
 }
 
 export function getQuizWithQuestions(db: Db, quizId: number) {
-  const quiz = db.select().from(quizzes).where(eq(quizzes.id, quizId)).get();
+  const quiz = getQuizById(db, quizId);
   if (!quiz) return null;
 
   const questions = db
@@ -69,7 +69,7 @@ export function computeResult(
   selectedAnswers: Record<number, number>
 ) {
   try {
-    const quiz = db.select().from(quizzes).where(eq(quizzes.id, quizId)).get();
+    const quiz = getQuizById(db, quizId);
     if (!quiz) {
       console.error("quiz not found");
       return null;
